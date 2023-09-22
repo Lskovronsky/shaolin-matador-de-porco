@@ -58,6 +58,9 @@ footer {
 a {
     color: #007acc;
 }
+a {
+    color: #007acc;
+}
 
 a:hover {
     text-decoration: underline;
@@ -80,36 +83,4 @@ img {
 
 #formulario-contato {
     background-color: #fff;
-    padding: 20px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-}
-
-#formulario-contato label {
-    display: block;
-    margin-bottom: 10px;
-    font-weight: bold;
-}
-
-#formulario-contato input[type="text"],
-#formulario-contato input[type="email"],
-#formulario-contato textarea {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 15px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-}
-
-#formulario-contato button {
-    background-color: #007acc;
-    color: #fff;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-#formulario-contato button:hover {
-    background-color: #005faa;
 }

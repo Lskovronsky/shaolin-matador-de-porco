@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="caminho/para/seu/arquivo.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Força Magnética e Força Elétrica</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        input, button {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Calculadora de Força Magnética e Força Elétrica</h1>
+
+    <label for="carga1">Carga 1 (em Coulombs): </label>
+    <input type="text" id="carga1">
+
+    <label for="carga2">Carga 2 (em Coulombs): </label>
+    <input type="text" id="carga2">
+
+    <label for="distancia">Distância (em metros): </label>
+    <input type="text" id="distancia">
+
+    <button onclick="calcularForcaMagnetica()">Calcular Força Magnética</button>
+    <button onclick="calcularForcaEletrica()">Calcular Força Elétrica</button>
+
+    <h2>Resultados:</h2>
+    <p id="resultado"></p>
+
+    <script>
+        function calcularForcaMagnetica() {
+            var carga1 = document.getElementById("carga1").value;
+            var carga2 = document.getElementById("carga2").value;
+            var distancia = document.getElementById("distancia").value;
+
+            var forcaMagnetica = (9 * Math.pow(10, 9) * carga1 * carga2) / Math.pow(distancia, 2);
+
+            document.getElementById("resultado").innerHTML = "A força magnética é " + forcaMagnetica.toFixed(2) + " Newtons.";
+        }
+
+        function calcularForcaEletrica() {
+            var carga1 = document.getElementById("carga1").value;
+            var carga2 = document.getElementById("carga2").value;
+            var distancia = document.getElementById("distancia").value;
+
+            var forcaEletrica = (8.99 * Math.pow(10, 9) * carga1 * carga2) / Math.pow(distancia, 2);
+
+            document.getElementById("resultado").innerHTML = "A força elétrica é " + forcaEletrica.toFixed(2) + " Newtons.";
+        }
+    </script>
+
+</body>
+</html>
